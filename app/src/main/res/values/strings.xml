@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PokemonTCG</string>
+    <string name="mainButton">New Game</string>
+</resources>

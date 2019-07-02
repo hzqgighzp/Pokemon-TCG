@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Game">
+
+    <ImageView
+        android:id="@+id/gamebackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/gamebackground" />
+
+    <TextView
+        android:id="@+id/round"
+        android:layout_width="172dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="Round: 1"
+        android:textColor="#FF5722"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/card1"
+        android:layout_width="240dp"
+        android:layout_height="283dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="383dp"
+        android:layout_marginRight="383dp"
+        android:layout_marginBottom="64dp"
+        android:onClick="determineRarity"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/card2"
+        android:layout_width="240dp"
+        android:layout_height="283dp"
+        android:layout_marginStart="383dp"
+        android:layout_marginLeft="383dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginRight="108dp"
+        android:layout_marginBottom="64dp"
+        android:onClick="determineRarity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="205dp"
+        android:layout_marginLeft="205dp"
+        android:text="Score:"
+        android:textColor="#FF5722"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ball1"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginLeft="284dp"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pokeball" />
+
+    <ImageView
+        android:id="@+id/ball2"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="314dp"
+        android:layout_marginLeft="314dp"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pokeball" />
+
+    <ImageView
+        android:id="@+id/ball3"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="344dp"
+        android:layout_marginLeft="344dp"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pokeball" />
+
+    <ImageView
+        android:id="@+id/ball4"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="374dp"
+        android:layout_marginLeft="374dp"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pokeball" />
+
+    <ImageView
+        android:id="@+id/ball5"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="404dp"
+        android:layout_marginLeft="404dp"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pokeball" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="296dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="217dp"
+        android:layout_marginLeft="217dp"
+        android:layout_marginTop="349dp"
+        android:layout_marginEnd="218dp"
+        android:layout_marginRight="218dp"
+        android:layout_marginBottom="29dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="309dp"
+        android:layout_marginLeft="309dp"
+        android:layout_marginTop="149dp"
+        android:layout_marginEnd="310dp"
+        android:layout_marginRight="310dp"
+        android:layout_marginBottom="150dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/notification"
+        android:layout_width="349dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginLeft="192dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginRight="190dp"
+        android:layout_marginBottom="128dp"
+        android:background="#FF5722"
+        android:onClick="hide"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/winner"
+        android:layout_width="381dp"
+        android:layout_height="219dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginLeft="175dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginRight="175dp"
+        android:layout_marginBottom="96dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/winner" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="60dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="335dp"
+        android:layout_marginLeft="335dp"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="336dp"
+        android:layout_marginRight="336dp"
+        android:layout_marginBottom="29dp"
+        android:onClick="reset"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pokemon" />
+
+    <TextView
+        android:id="@+id/restart"
+        android:layout_width="185dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginLeft="162dp"
+        android:layout_marginTop="349dp"
+        android:layout_marginEnd="384dp"
+        android:layout_marginRight="384dp"
+        android:layout_marginBottom="42dp"
+        android:text="Touch the icon to restart:"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
